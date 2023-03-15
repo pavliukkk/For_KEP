@@ -1,0 +1,33 @@
+.h1 {
+    margin-left: 10px;
+    padding-top: 30px;
+    color: #ffffff;
+}
+.backgr {
+    background-image: url(../media/cropped-1366-768-1129946.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.a {
+    display: inline-block;
+    justify-content: center;
+    background-color: #8e1fd3;
+    color: yellow;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+  
+ .a:hover {
+    background-color: black;
+  }
+  .margin_2 {
+    margin-right: 30px;
+  }
