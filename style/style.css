@@ -10,8 +10,7 @@
     border: 3px solid maroon;
    }
 .body{
-    backdrop-filter: blur(3px);
-    background-image: url(media/5a8b27e5dfb10.jpg);
+    background-image: url(media/background.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
