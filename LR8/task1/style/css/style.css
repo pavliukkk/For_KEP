@@ -1,0 +1,45 @@
+body {
+    background-image: url(../media/bg/bg-02.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.icons{
+    background: linear-gradient(gray, black, maroon, white);
+    border-radius: 20px; 
+}
+.icons a {
+    background-image: url(../media/sprite/css_sprites.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    margin: 2px 5px 2px 5px;
+  }
+  
+  .icons a.icon-discord {
+    background-position: -10px -10px;
+  }
+  
+  .icons a.icon-facebook {
+    background-position: -80px -10px;
+  }
+
+  .icons a.icon-github {
+    background-position: -150px -10px;
+  }
+    
+  .icons a.icon-instagram {
+    background-position: -220px -10px;
+  }
+   
+  .icons a.icon-twitter {
+    background-position: -290px -10px;
+  }
+  
+  .icons a.icon-youtube {
+    background-position: -360px -10px;
+  }
