@@ -1,87 +1,85 @@
 ﻿<!DOCTYPE html>
 <html lang="uk">
     <head>
-        <title>Portfolio</title>
-        <meta charset="utf-8">
-        <link href="style/style.css" rel="stylesheet" type="text/css">
-        <link href="style/normalize.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="style/media/portfolio_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="style/media/portfolio_icon.png">
     </head>
-    <body class="body">
-        <nav>
-            <ul class="topnav">
-                <li><a class="active" href="#name">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
-        </nav>
-        <div>
-            <div>
-                <img src="style/media/photo_2023-01-27_18-29-05.jpg" alt="Me" height="300" class="myphotostyle">
-                <main>
-                    <p class="fontPIP" id="name">Павлюк Петро Васильович</p>
-                    <div class="birthdate">Дата народження: 12.05.2005</div>
-                    <div class="info">
-                        <br>
-                        <h1 class="margin" id="about"> Дані про освіту: </h1>
-                    <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> 
-                        <ul>
-                            <li>Фаховий Коледж Електронних Приладів Івано-Франківського Національного Технічного Університету Нафти й Газу <b>(2020-2024)</b></li>
-                            <li>Бабинська ЗОШ I-II ступенів <b>(2011-2020)</b></li> 
-                        </ul>
-                    </div>
-                        <br>
-                        <span>Загальний рівень володіння комп'ютером: </span><strong>Впевнений користувач</strong> 
-                            <br>
-                        Рівень володіння MS Office(Word, Exсel, PowerPoint, Access), MS Visual Studio, 
-                        MS Visual Studio Code, PyCharm, MySQL, PostgreSQL: <strong>Впевнений користувач</strong> <br>
-                        Рівень володіння IntelliJ IDEA: <strong>Середній рівень</strong> <br>
-                        Рівень володіння Eclipse: <strong>Низький рівень</strong>
-                        <h2 class="margin">Знання мов:</h2>
-                        <ol>
-                            <li>Рівень володіння українською мовою: <strong>C2</strong></li>
-                            <li>Рівень володіння англійською мовою: <strong>B1</strong></li> 
-                        </ol>
-                        <h2 class="margin">Working with:</h2>
-                        <ol reversed>
-                            <li>C/C++
-                                <ol>
-                                    <li>it's 1</li>
-                                    <li>it's 2</li>
-                                    <li>it's 3</li>
-                                </ol> </li> 
-                            <li>C#</li>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>UML</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ol>
-                        <br>
-                            <span id="contact">Контактна Інформація:</span>
-                            <br>
-                            <span> 
-                                <a href="tel:+38(098)7654321" target="_blank"> +38(098)7654321 </a>
-                            </span>
-                            <br>
-                       <a href="mailto:petro.pavliuk-pi2002@kep.nung.edu.ua" target="_blank" class="yellowfont">petro.pavliuk-pi2002@kep.nung.edu.ua</a>
-                    </div>
-                </main>
-                <br>
-                <div class="line"></div>
-                    <footer>
-                        <br>
-                        <h1 class="jobs">МОЇ РОБОТИ</h1>
-                        <a href="LR3/index.html" class="lr3_button" target="_blank">Лабораторна робота №3</a>
-                        <a href="PR1/index.html" class="lr3_button" target="_blank">Практична робота №1</a>
-                        <a href="LR4/index.html" class="lr3_button">Лабораторна робота №4</a>
-                        <a href="LR5/index.html" class="lr3_button">Лабораторна робота №5</a>
-                        <a href="LR6/index.html" class="lr3_button">Лабораторна робота №6</a>
-                        <a href="LR7/index.html" class="lr3_button">Лабораторна робота №7</a>
-			<a href="LR8/index.html" class="lr3_button">Лабораторна робота №8</a>
-                    </footer>
+    <body>
+        <header>
+            <div class="me">
+                <img src="style/media/photo_2023-01-27_18-29-05.jpg" alt="photo" class="myphoto">
             </div>
-        </div>
+            <h1>Павлюк Петро Васильович</h1>
+            <nav>
+                <ul class = "ulfornav">
+                    <li><a href = "#main" class="main">Головна</a></li>
+                    <li><a href = "#bio">Біографія</a></li>
+                    <li><a href = "#osv">Освіта</a></li>
+                    <li><a href = "#skills">Професійні навички</a></li>
+                    <li><a href = "#contacts">Контакти</a></li>
+                    <li><a href = "#tasks">Роботи</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 id="bio">Біографія</h1>
+                <div class="textstyle">
+                    <p>Павлюк Петро Васильович народився 12 травня 2005 року. 18 років. Полюбляє грати в комп'ютерні ігри,
+                        футбол, більярд, настільний теніс, волейбол. Полюбляє слухати музику, улюблені жанри - фонк та українська музика.
+                        Обожнює виконувати фізичні вправи. Не одружений.
+                    </p>
+                </div>
+            <h1 id="osv">Освіта</h1>
+            <div class="textstyle">
+                <ul class = "ulforinfo">
+                    <li>Фаховий Коледж Електронних Приладів Івано-Франківського Національного 
+                        Технічного Університету Нафти й Газу <b>(2020-2024)</b></li>
+                    <li>Бабинська ЗОШ I-II ступенів <b>(2011-2020)</b></li> 
+                </ul>
+            </div>
+            <h1 id="skills">Професійні навички</h1>
+                <div class="textstyle">
+                    Загальний рівень володіння комп'ютером: <strong>Впевнений користувач</strong> 
+                        <br>
+                    Рівень володіння MS Office(Word, Exсel, PowerPoint, Access), MS Visual Studio, 
+                    MS Visual Studio Code, PyCharm, MySQL, PostgreSQL: <strong>Впевнений користувач</strong> 
+                        <br>
+                    Рівень володіння IntelliJ IDEA: <strong>Середній рівень</strong>
+                        <br>
+                    Рівень володіння Eclipse: <strong>Низький рівень</strong>
+                    <h2 class="margin">Знання мов:</h2>
+                    <ul class="ulforinfo">
+                        <li>Рівень володіння українською мовою: <strong>C2</strong></li>
+                        <li>Рівень володіння англійською мовою: <strong>B1</strong></li> 
+                    </ul>
+                </div>
+            <h1 id="contacts">Контакти</h1>
+                <div class="contactsstyle">
+                    <div class = "bluefontcolor">
+                        <p class="contactNomerEmail">Номер телефону:</p>
+                        <a href="tel:+38(098)7654321" target="_blank"> +38(098)7654321 </a>
+                    </div>
+                    <div class = "yellowfontcolor">
+                        <p class="contactNomerEmail">Електронна пошта:</p>
+                        <a href="mailto:petro.pavliuk-pi2002@kep.nung.edu.ua" target="_blank" class="yellowfont">petro.pavliuk-pi2002@kep.nung.edu.ua</a>
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <div class="line"></div>
+            <h1 class="jobs" id="tasks">Мої роботи</h1>
+            <a href="LR1/index.html" class="lr_button" target="_blank">Лабораторна робота №1</a>
+            <a href="LR2/index.html" class="lr_button" target="_blank">Лабораторна робота №2</a>
+            <a href="LR3/index.html" class="lr_button" target="_blank">Лабораторна робота №3</a>
+            <a href="PR1/index.html" class="lr_button" target="_blank">Практична робота №1</a>
+            <a href="LR4/index.html" class="lr_button" target="_blank">Лабораторна робота №4</a>
+            <a href="LR5/index.html" class="lr_button" target="_blank">Лабораторна робота №5</a>
+            <a href="LR6/index.html" class="lr_button" target="_blank">Лабораторна робота №6</a>
+            <a href="LR7/index.html" class="lr_button" target="_blank">Лабораторна робота №7</a>
+            <a href="LR8/index.html" class="lr_button" target="_blank">Лабораторна робота №8</a>
+            <a href="PR2/index.html" class="lr_button" target="_blank">Практична робота №2</a>
+        </footer>
     </body>
 </html>
