@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body BGCOLOR = white>    
+    
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">padding</div>
+        <div class="tab">position</div>
+        <div class="tabContent">
+            <div>Верхній лівий радіус:
+                <div class="input-block">
+                    <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="ttl" value="0" disabled>
+                </div>
+            </div>
+            <div>Верхній правий радіус:
+                <div class="input-block">
+                    <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="ttr" value="0" disabled>
+                </div>
+
+            </div>
+            <div>Нижній правий радіус:
+                <div class="input-block">
+                    <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="tbr" value="0" disabled>
+                </div>
+
+            </div>
+            <div>Нижній лівий радіус:
+                <div class="input-block">
+                    <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="tbl" value="0" disabled>
+                </div>
+
+            </div>
+            <div id="block"></div>
+            <textarea name="code" id="codeText" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="tabContent">
+            <div>
+                <div>Верхній внутрішній відступ:
+                    <div class="input-block">
+                        <input type="range" id="rPadTop" min="0" max="50" value="0" oninput="generatePadding()">
+                        <input type="text" id="tPadTop" value="0" disabled>
+                    </div>
+                </div>
+                <div>Правий внутрішній відступ:
+                    <div class="input-block">
+                        <input type="range" id="rPadRight" min="0" max="50" value="0" oninput="generatePadding()">
+                        <input type="text" id="tPadRight" value="0" disabled>
+                    </div>
+                </div>
+                <div>Нижній внутрішній відступ:
+                    <div class="input-block">
+                        <input type="range" id="rPadBottom" min="0" max="50" value="0" oninput="generatePadding()">
+                        <input type="text" id="tPadBottom" value="0" disabled>
+                    </div>
+                </div>
+                <div>Лівий внутрішній відступ:
+                    <div class="input-block">
+                        <input type="range" id="rPadLeft" min="0" max="50" value="0" oninput="generatePadding()">
+                        <input type="text" id="tPadLeft" value="0" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="blockPad">
+                Приклад padding
+            </div>
+            <textarea name="code" id="codeTextPad" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="tabContent">
+            <div>
+                <div>Тип позиціювання:
+                    <div class="input-block">
+                        <label for="positionSelect">Виберіть позиціювання:</label>
+                        <select id="positionSelect" onchange="generatePosition()">
+                            <option value="static">Static</option>
+                            <option value="relative">Relative</option>
+                            <option value="absolute">Absolute</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                </div>
+                <div>Top:
+                    <div class="input-block">
+                        <input type="range" id="rTop" min="0" max="100" value="0" oninput="generatePosition()">
+                        <input type="text" id="tTop" value="0" disabled>
+                    </div>
+                </div>
+                <div>Right:
+                    <div class="input-block">
+                        <input type="range" id="rRight" min="0" max="100" value="0" oninput="generatePosition()">
+                        <input type="text" id="tRight" value="0" disabled>
+                    </div>
+                </div>
+                <div>Bottom:
+                    <div class="input-block">
+                        <input type="range" id="rBottom" min="0" max="100" value="0" oninput="generatePosition()">
+                        <input type="text" id="tBottom" value="0" disabled>
+                    </div>
+                </div>
+                <div>Left:
+                    <div class="input-block">
+                        <input type="range" id="rLeft" min="0" max="100" value="0" oninput="generatePosition()">
+                        <input type="text" id="tLeft" value="0" disabled>
+                    </div>
+                </div>
+            </div>
+            <div id="blockPosition">
+                Приклад позиціювання
+            </div>
+            <textarea name="code" id="codeTextPosition" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script> 
+</body>
+</html>

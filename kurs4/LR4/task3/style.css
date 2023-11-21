@@ -1,0 +1,49 @@
+#tabs .tab{
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+#tabs .whiteborder{
+    border: 1px solid #707070;
+    border-bottom: 1px solid #ffff;
+    border-radius: 3px 3px 0 0;
+}
+#tabs .tabContent{
+    width: max-content;
+    border: 1px solid #707070;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+}
+#tabs .hide{
+    display: none;
+}
+#tabs .show{
+    display: block;
+}
+
+#blockPosition{
+    max-width: 160px;
+    max-height: 20px;
+}
+
+#block, #blockVis{
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+.blockVa{
+    height: 120px;
+    line-height: 120px;
+}
+#codeText{
+    width: 100%;
+    margin: 10px 0;
+}
+textarea{
+    min-width: 300px;
+}
