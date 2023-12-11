@@ -23,7 +23,7 @@ h1 {
 }
 
 .quantity {
-    color: red;
+    color: rgb(220, 180, 19);
 }
 
 .price, .item-total, .total {
