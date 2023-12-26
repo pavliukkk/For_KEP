@@ -1,1 +1,65 @@
+{
+  "products" : [
+    {
+      "note" : "new",
+      "category" : "Поло",
+      "image" : "img/doll.jpg",
+      "name": "Біле поло",
+      "link" : "https://isuit.it/en/k02-kiton-white-cotton-polo-uk1172e-1-23v390004.html",
+      "oldPrice" : null,
+      "price" : null,
+      "available" : false
+    },
+    {
+      "note" : null,
+      "category" : "Сорочки",
+      "image" : "img/car.jpg",
+      "name": "Біло-синя сорочка",
+      "link" : "https://isuit.it/en/k02-kiton-blue-white-cotton-shirt-ucch08-29050000.html",
+      "oldPrice" : 550,
+      "price" : 500,
+      "available" : true
+    },
+    {
+      "note" : "hit",
+      "category" : "Светри",
+      "image" : "img/robot.jpg",
+      "name": "Синій светр",
+      "link" : "https://isuit.it/en/k01-kired-blue-pa-ea-coat-wrouxw-7717507001.html",
+      "oldPrice" : 920,
+      "price" : 800,
+      "available" : true
+    },
+    {
+      "note" : "hit",
+      "category" : "пальто",
+      "image" : "img/kostruktor.jpg",
+      "name": "Вовняне пальто Sartorio Napoli Green Virgin",
+      "link" : "https://isuit.it/en/s05-sartorio-napoli-green-virgin-wool-coat-sfurats-1-0680003001.html",
+      "oldPrice" : null,
+      "price" : 1200,
+      "available" : true
+    },
+    {
+      "note" : null,
+      "category" : "Кросівки",
+      "image" : "pics/sneakers.jpg",
+      "name": "Чорні кросівки",
+      "link" : "https://isuit.it/en/i01-isaia-black-cotton-sneakers-amalfi-snkmg3-knt01990.html",
+      "oldPrice" : 850,
+      "price" : 425,
+      "available" : true
+    },
+    {
+      "note" : "new",
+      "category" : "Рукавиці",
+      "image" : "pics/gloves.jpg",
+      "name": "Коричневі шкіряні рукавиці",
+      "link" : "https://isuit.it/en/k02-kiton-brown-leather-suede-gloves-gloves-12-00001.html",
+      "oldPrice" : 500,
+      "price" : 250,
+      "available" : true
+    }
+  ]
+}
 
