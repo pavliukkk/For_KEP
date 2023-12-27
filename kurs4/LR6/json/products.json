@@ -1,0 +1,64 @@
+﻿{
+  "products" : [
+    {
+      "note" : "new",
+      "category" : "Ляльки",
+      "image" : "img/doll.jpg",
+      "name": "Стильна лялька Playmind Oh My Style Дейзі",
+      "link" : "https://rozetka.com.ua/ua/playmind-pm4001-2/p321628348/",
+      "oldPrice" : null,
+      "price" : null,
+      "available" : false
+    },
+    {
+      "note" : null,
+      "category" : "Машинки",
+      "image" : "img/car.jpg",
+      "name": "Машинка-трансформер Screechers Wild Дикі Скрічери L1 Найтвівер",
+      "link" : "https://rozetka.com.ua/ua/screechers_wild_eu683114/p45632784/",
+      "oldPrice" : 597,
+      "price" : 537,
+      "available" : true
+    },
+    {
+      "note" : "hit",
+      "category" : "Робототехніка",
+      "image" : "img/robot.jpg",
+      "name": "Робот Blue Rocket Robbie Stem",
+      "link" : "https://rozetka.com.ua/ua/blue-rocket-8436536808315/p304650498/",
+      "oldPrice" : 2499,
+      "price" : 2299,
+      "available" : true
+    },
+    {
+      "note" : "hit",
+      "category" : "Конструктори",
+      "image" : "img/konstruktor.png",
+      "name": "Конструктор LEGO DUPLO Town Поліцейський мотоцикл 5 деталей",
+      "link" : "https://rozetka.com.ua/ua/lego_10967/p336242518/",
+      "oldPrice" : null,
+      "price" : 329,
+      "available" : true
+    },
+    {
+      "note" : null,
+      "category" : "Спінери",
+      "image" : "img/spiner.webp",
+      "name": "Літаючий спіннер левітуючий шар",
+      "link" : "https://rozetka.com.ua/ua/334287907/p334287907/",
+      "oldPrice" : 600,
+      "price" : 399,
+      "available" : true
+    },
+    {
+      "note" : "new",
+      "category" : "Пазли",
+      "image" : "img/puzzles.webp",
+      "name": "Пазл Orner Коти у відкритому космосі 500",
+      "link" : "https://rozetka.com.ua/ua/puzzles/c102848/",
+      "oldPrice" : 299,
+      "price" : 185,
+      "available" : true
+    }
+  ]
+}
