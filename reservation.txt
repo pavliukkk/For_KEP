@@ -1,0 +1,89 @@
+@csrf_exempt
+def save_reservation(request):
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            date = request.POST.get('date')
+            time = request.POST.get('time')
+            people = request.POST.get('people')
+            table = request.POST.get('table')
+
+            # Convert date to datetime object
+            reservation_datetime = datetime.datetime.strptime(date + ' ' + time, '%Y-%m-%d %H:%M')
+
+            # Calculate start and end times for the existing reservations within the 2-hour window
+            existing_reservation_start_time = reservation_datetime - datetime.timedelta(hours=2)
+            existing_reservation_end_time = reservation_datetime + datetime.timedelta(hours=2)
+
+            # Check for existing reservations for both main and contact tables
+            existing_reservations_main = Reservation_main.objects.filter(
+                date=date,
+                time__gte=existing_reservation_start_time,
+                time__lte=existing_reservation_end_time
+            ).values_list('table', flat=True)
+
+            existing_reservations_contact = Reservation.objects.filter(
+                date=date,
+                time__gte=existing_reservation_start_time,
+                time__lte=existing_reservation_end_time
+            ).values_list('table', flat=True)
+
+            existing_reservation_main_user = Reservation_main.objects.filter(
+                user=request.user,
+                date=date,
+                time__gte=existing_reservation_start_time,
+                time__lte=existing_reservation_end_time
+            ).exists()
+
+            # Combine reserved tables from both types of reservations
+            existing_reservations = list(existing_reservations_main) + list(existing_reservations_contact)
+
+            if existing_reservation_main_user:
+                # Handle case where selected table is already reserved by the user
+                return render(request, 'index.html', {'existing_reservation_user': True})
+
+            all_tables = {f'Столик №{i}': f'Table №{i}' for i in range(1, 7)}
+
+            # Translate existing reservations to English for comparison
+            translated_existing_reservations = [all_tables.get(t, t) for t in existing_reservations]
+
+            # Find available tables by subtracting reserved tables from all tables
+            available_tables = list(set(all_tables.values()) - set(translated_existing_reservations))
+            available_tables.sort()
+
+            # Initialize dictionary for table translations
+            table_translations = {
+                'uk': {v: k for k, v in all_tables.items()},
+                'en': {v: v for k, v in all_tables.items()}
+            }
+
+            # Get available tables in the selected language
+            selected_language = get_language()
+            available_tables_in_selected_language = [table_translations[selected_language].get(table, table) for table in available_tables]
+
+            # Translate table to English for comparison
+            selected_table_translation = all_tables.get(table, table)
+
+            if selected_table_translation not in available_tables:
+                # Handle case where selected table is occupied
+                return render(request, 'index.html', {'table_is_not_available': True, 'available_tables': available_tables_in_selected_language})
+            else:
+                # Convert date to display month name
+                month_name = datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%B')
+
+                # Save the reservation
+                reservation = Reservation_main(user=request.user, date=date, time=time, people=people, table=table)
+                reservation.save()
+
+                # Sending email notification
+                subject = 'Table Reservation Confirmation'
+                message = f'{table} has been successfully reserved for {people} people at {time} on {month_name} {date}.'
+                from_email = 'foodzero.restaurant@gmail.com'
+                to_email = [request.user.email]  # Assuming user's email is stored in User model
+
+                send_mail(subject, message, from_email, to_email, fail_silently=False)
+
+                return render(request, 'index.html', {'success_reservation_modal': True})
+        else:
+            return HttpResponseRedirect('/sign_up/')
+    else:
+        return HttpResponseRedirect(reverse('home'))
